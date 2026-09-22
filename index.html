@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laboratorio de Equipos</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <!-- =====================================
+             PANEL 1: BIENVENIDO
+        ====================================== -->
+
+        <section class="panel panel-bienvenida" id="inicio">
+
+            <header class="encabezado-simple">
+                <h1>Bienvenido</h1>
+            </header>
+
+            <div class="contenido-login">
+
+                <!-- Imagen -->
+                <div class="imagen-placeholder">
+                    <span></span>
+                </div>
+
+                <!-- Formulario -->
+                <form class="formulario" id="formularioLogin">
+
+                    <input
+                        type="text"
+                        id="usuario"
+                        placeholder="Usuario"
+                        aria-label="Usuario"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Contraseña"
+                        aria-label="Contraseña"
+                        required
+                    >
+
+                    <button type="submit">
+                        Iniciar sesión
+                    </button>
+
+                </form>
+
+                <a href="#" class="recuperar">
+                    ¿Olvidaste tu contraseña?
+                </a>
+
+            </div>
+
+            <footer class="menu-inferior">
+
+                <a href="#" onclick="mostrarInicio(event)">
+                    Equipos
+                </a>
+
+                <a href="#">
+                    Incidencias
+                </a>
+
+                <a href="#">
+                    Ajustes
+                </a>
+
+            </footer>
+
+        </section>
+
+
+        <!-- =====================================
+             PANEL 2: EQUIPOS
+        ====================================== -->
+
+        <section class="panel oculto" id="equipos">
+
+            <header class="titulo-azul">
+                <h2>Equipos</h2>
+            </header>
+
+            <div class="contenido">
+
+                <h2>Actividad actual</h2>
+
+                <div class="actividad">
+                    Desarrollo web
+                </div>
+
+
+                <h2>Lista de computadores</h2>
+
+                <article class="computador">
+
+                    <h3>PC-01</h3>
+
+                    <p>
+                        Listo para usar
+                    </p>
+
+                </article>
+
+
+                <article class="computador">
+
+                    <h3>PC-02</h3>
+
+                    <p>
+                        Falta programa
+                    </p>
+
+                </article>
+
+
+                <article class="computador">
+
+                    <h3>PC-03</h3>
+
+                    <p>
+                        Mouse defectuoso
+                    </p>
+
+                </article>
+
+
+                <!-- BOTÓN PARA IR AL RESUMEN -->
+
+                <button
+                    class="detalle"
+                    onclick="mostrarResumen()"
+                >
+                    Ver detalle completo
+                </button>
+
+            </div>
+
+
+            <footer class="menu-inferior">
+
+                <a href="#" onclick="mostrarEquipos(event)">
+                    Equipos
+                </a>
+
+                <a href="#">
+                    Incidencias
+                </a>
+
+                <a href="#">
+                    Ajustes
+                </a>
+
+            </footer>
+
+        </section>
+
+
+        <!-- =====================================
+             PANEL 3: RESUMEN
+        ====================================== -->
+
+        <section class="panel oculto" id="resumen">
+
+            <header class="titulo-azul">
+
+                <h2>Resumen</h2>
+
+            </header>
+
+
+            <div class="contenido resumen">
+
+                <p class="descripcion">
+                    Estado general del laboratorio
+                </p>
+
+
+                <div class="estado-general">
+
+                    <div class="circulo"></div>
+
+                    <div class="datos">
+
+                        <p>
+                            20 equipos registrados
+                        </p>
+
+                        <p>
+                            Última actualización: hoy
+                            <br>
+                            10:06
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <p class="texto-resumen">
+                    resumen de equipos
+                </p>
+
+
+                <article class="estadistica">
+
+                    <strong>12</strong>
+
+                    <span>
+                        Equipos listos
+                    </span>
+
+                </article>
+
+
+                <article class="estadistica">
+
+                    <strong>4</strong>
+
+                    <span>
+                        Equipos con observación
+                    </span>
+
+                </article>
+
+
+                <article class="estadistica">
+
+                    <strong>4</strong>
+
+                    <span>
+                        Equipos no disponibles
+                    </span>
+
+                </article>
+
+
+                <!-- BOTONES DE NAVEGACIÓN -->
+
+                <div class="botones-finales">
+
+                    <button
+                        class="volver"
+                        onclick="mostrarEquipos()"
+                    >
+                        Volver
+                    </button>
+
+                    <button
+                        class="inicio-final"
+                        onclick="mostrarInicio()"
+                    >
+                        Volver al inicio
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <footer class="menu-inferior">
+
+                <a href="#" onclick="mostrarEquipos(event)">
+                    Equipos
+                </a>
+
+                <a href="#">
+                    Incidencias
+                </a>
+
+                <a href="#">
+                    Ajustes
+                </a>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
